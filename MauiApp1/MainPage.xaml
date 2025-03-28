@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp3.MainPage"
+             BackgroundColor="#F0F0F0">
+    <!-- 
+      I acknowledge the following statements:
+      1. That the code I provide below is my own work and NOT copied from any outside resource, which includes, but is not limited to, an artificial intelligence program unless given explicit permission by the instructor.
+      2. That the code I provide below is my own work and NOT the work of my peers, tutors, or any other individual unless given explicit permission by the instructor.
+      3. That if the code below is in violation of statements 1 and 2 above, I may be reported to the Academic Integrity office and subject to penalties as described in the Academic Integrity Policy.
+      Your Name: Hardika Regmi
+      Your Student ID: w10173082
+    -->
+    
+    <ContentPage.Resources>
+        <!-- Visual Design: Updated  the color and font sizes. -->
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="#333333" />
+            <Setter Property="FontSize" Value="Medium" />
+            <Setter Property="Margin" Value="5" />
+        </Style>
+        <Style TargetType="RadioButton">
+            <Setter Property="TextColor" Value="#333333" />
+            <Setter Property="Margin" Value="5" />
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="BackgroundColor" Value="#007ACC" />
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="CornerRadius" Value="5" />
+            <Setter Property="Margin" Value="10" />
+        </Style>
+    </ContentPage.Resources>
+    
+    <Grid RowDefinitions="60, auto, auto, auto, auto" ColumnDefinitions="*, *, *">
+        <!-- Information Architecture: Added clear Title and made it bold. -->
+        <Label Text="Combo Meal Builder" 
+               Grid.Row="0" Grid.ColumnSpan="3"
+               FontAttributes="Bold" FontSize="Large"
+               HorizontalOptions="Center" VerticalOptions="Center"/>
+        
+        <!-- Information Architecture & Visual Design: Grouped all the main dish options 
+        and added extra padding.  -->
+        <ScrollView Grid.Row="1" Grid.ColumnSpan="3">
+            <VerticalStackLayout Padding="10">
+                <Label Text="1. Pick a main dish" FontAttributes="Bold" />
+                <RadioButton Content="Seafood Alfredo"/>
+                <RadioButton Content="Chicken Alfredo"/>
+                <RadioButton Content="Chicken Picatta"/>
+                <RadioButton Content="Turkey Club"/>
+                <RadioButton Content="Lobster Pie"/>
+                <RadioButton Content="Prime Rib"/>
+                <RadioButton Content="Shrimp Scampi"/>
+                <RadioButton Content="Turkey Dinner"/>
+                <RadioButton Content="Stuffed Chicken"/>
+            </VerticalStackLayout>
+        </ScrollView>
+        
+        <!-- Interactive Design: Separated side and drink options. -->
+        <ScrollView Grid.Row="2" Grid.Column="0">
+            <VerticalStackLayout Padding="10">
+                <Label Text="2. Pick a Side" FontAttributes="Bold"/>
+                <RadioButton Content="Classic Fries"/>
+                <RadioButton Content="Spicy Fries"/>
+                <RadioButton Content="Mashed Potatoes"/>
+                <RadioButton Content="Steamed Vegetables"/>
+                <RadioButton Content="Garden Salad"/>
+                <RadioButton Content="Loaded Potato"/>
+                <RadioButton Content="Mac and Cheese"/>
+            </VerticalStackLayout>
+        </ScrollView>
+        
+        <ScrollView Grid.Row="2" Grid.Column="1">
+            <VerticalStackLayout Padding="10">
+                <Label Text="3. Pick a Drink" FontAttributes="Bold"/>
+                <RadioButton Content="Soda"/>
+                <RadioButton Content="Tea"/>
+                <RadioButton Content="Coffee"/>
+                <RadioButton Content="Mineral Water"/>
+                <RadioButton Content="Juice"/>
+                <RadioButton Content="Milk"/>
+            </VerticalStackLayout>
+        </ScrollView>
+        
+        <!-- Visual & Interactive Design: Placeed meal size options in their own section -->
+        <VerticalStackLayout Grid.Row="3" Grid.ColumnSpan="3" Padding="10">
+            <Label Text="4. Would you like to size up your meal?" FontAttributes="Bold"/>
+            <RadioButton Content="Small"/>
+            <RadioButton Content="Medium"/>
+            <RadioButton Content="Large"/>
+        </VerticalStackLayout>
+        
+        <!-- Information Architecture & Visual Design: Created "Add to Order" button. -->
+        <VerticalStackLayout Grid.Row="4" Grid.ColumnSpan="3" Padding="10" HorizontalOptions="Center">
+            <Label Text="Combo Cost: $12.34" FontAttributes="Bold"/>
+            <Button Text="Add to Order" />
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>
